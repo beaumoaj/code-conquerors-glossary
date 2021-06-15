@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Searchbar() {
+const Searchbar = () => {
     return (
-        <div type="text" placeholder="Search...">
-            
+        <div className="Header">
+            <input type="text" placeholder="Search..."></input>
         </div>
+
+        
     )
 }
 
