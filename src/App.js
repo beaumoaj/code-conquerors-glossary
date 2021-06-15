@@ -1,22 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import SearchButton from './SearchButton';
+  import {terms} from "./data.js"
+import Terms from './Terms';
+
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+  <div>{`The length of the list is ${terms.length}`}</div>
+        <h1>Terms Definition</h1>
+        <SearchButton />
+        <Terms terms={terms}/>
+        
+        
       </header>
     </div>
   );
