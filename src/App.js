@@ -10,13 +10,13 @@ import Login from './Login';
 
 function App() {
   const [search, setSearch] = useState("");
-  //  const [terms, setTerms] = useState("");
+    const [terms, setTerms] = useState([]);
   // const [password, setPassword] = useState("");
-  // useEffect(() => {
-  //   fetch("https://wm2-glossary.herokuapp.com/api/terms")
-  //     .then((res) => res.json())
-  //     .then(setTerms)
-  // },[]);
+  useEffect(() => {
+    fetch("https://wm2-glossary.herokuapp.com/api/terms")
+      .then((res) => res.json())
+      .then(setTerms)
+  },[]);
 
   return (
     <div className="App">
