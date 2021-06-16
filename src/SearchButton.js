@@ -1,18 +1,20 @@
-import React,{useState} from 'react';
+import React from 'react';
 
-export default function SearchButton(){
-    const[terms, setTerms]= useState("");
-    function handleSubmit(e){
-        e.preventDefault()
+export default function SearchButton({ search, setSearch }) {
+    //  const [search, setSearch] = useState("");
+
+    const handleChange = e => {
+        setSearch(e.target.value);
     }
-    return(
+    return (
         <div>
-            <form onSubmit={handleSubmit}>
-            <input type="text" 
-            value={terms}
-            onChange={(e)=>setTerms(e.target.value)} 
-            placeholder="Type words"/>
-            <button type="submit">Submit Button</button>
+            <form>
+                <input type="text"
+                    value={search}
+                    onChange={handleChange}
+                    placeholder="Type words" />
+                < button type="submit">Submit Button</button>
+                {/* <button type="submit" onClick={handleSubmit}>Submit Button</button> */}
             </form>
         </div>
     )
