@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import SearchFile from './SearchFile';
+// import TermUpdate from './TermUpdate';
+import terms from './listOfTerms';
+import DataOfTerms from './DataOfTerms';
 
-function App() {
+
+function App()
+{
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>{`the length of the list is ${ terms.length }`}</div>
+      <SearchFile searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      {/* <TermUpdate /> */}
+      <DataOfTerms searchTerm={searchTerm}/>
     </div>
   );
 }
