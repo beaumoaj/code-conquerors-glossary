@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 // import { terms } from './data';
-const Login = ()=>{
-    const[email, setEmail]= useState("");
-    const[password, setPassword]= useState("");
+const Login = ({ setToken }) => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     function handleSubmit(e) {
-            e.preventDefault();
-        fetch("https://wm2-glossary.herokuapp.com/api/contributor/login",{
-            method:"POST",
-            headers:{
-                 "Content-Type": "application/json"
+        e.preventDefault();
+        fetch("https://wm2-glossary.herokuapp.com/api/contributor/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify({email, password,}),
+            body: JSON.stringify({ email, password, }),
         })
-        .then((response)=>response.json())
-        .then((data)=>console.log(data))
+            .then((response) => response.json())
+            .then((data) => setToken(data.auth))
     }
-    return(
+    return (
         <div className="login">
             <form onSubmit={handleSubmit}>
-                 <input
+                <input
                     type="email"
                     placeholder="Type Email"
                     value={email}
