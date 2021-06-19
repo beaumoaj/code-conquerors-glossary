@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 // import { terms } from './data';
 const AddNewTerm = ({ token }) => {
     const [newTerm, setNewTerm] = useState("");

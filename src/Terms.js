@@ -6,12 +6,14 @@ import React from 'react';
         term.term.toLowerCase().includes(search.toLowerCase()
         ))
     return (
-        <div className="Term">
+        <div className="Terms">
 
             {filteredTerms.map((term) => (
                 <div key={term.id}>
-                    <h2>{term.term}</h2>
-                    <p>{term.definition}</p></div>
+                    <h2 className="container">{term.term}
+                        <p>{term.definition}</p>
+                    </h2>
+                    </div>
 
             ))}
 

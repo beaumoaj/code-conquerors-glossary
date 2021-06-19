@@ -6,6 +6,7 @@ import { terms } from "./data.js"
 import Terms from './Terms';
 import Login from './Login';
 import AddNewTerm from './AddNewTerm';
+import UpdatingTheTerms from './UpdatingTheTerms';
 
 
 
@@ -13,6 +14,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [terms, setTerms] = useState([]);
   const [token, setToken] = useState("");
+  
   // const [password, setPassword] = useState("");
   useEffect(() => {
     fetch("https://wm2-glossary.herokuapp.com/api/terms")
@@ -29,6 +31,7 @@ function App() {
         <SearchButton search={search} setSearch={setSearch} />
         <Terms terms={terms} search={search} />
         <AddNewTerm token={token} />
+        <UpdatingTheTerms  />
       </header>
     </div>
   );
