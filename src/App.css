@@ -2,12 +2,44 @@
   text-align: center;
 }
 .container {
-        box-shadow: 1px 1.5px 5px 0.5px black;
-        padding: 15px 20px;
-        
-      }
-       
+  box-shadow: 1px 1.5px 5px 0.5px black;
+  padding: 15px 20px;
+}
+.AddTerm form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  resize: none;
+}
 
+.icon {
+  position: relative;;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  color: black;
+  background: blue;
+  cursor: pointer;
+  border-radius: 24px;
+}
+input[type=submit]{
+  background-color: rgb(81, 255, 0);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer; ;
+}
+.show {
+  display: block;
+  transition: 800ms;
+  opacity: 1;
+}
+.show.active {
+  transform: translateY(100px) scale(0) rotateY(180deg);
+  opacity: 0;
+}
 
 .App-logo {
   height: 40vmin;

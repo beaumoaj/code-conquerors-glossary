@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { terms } from './data';
-const AddNewTerm = ({ token }) => {
+const AddNewTerm = ({ token, showBtn }) => {
     const [newTerm, setNewTerm] = useState("");
     const [definitions, setDefinitions] = useState("");
 
@@ -25,18 +25,21 @@ const AddNewTerm = ({ token }) => {
     }
 
     return (
-        <div className="NewTerm">
+        <div className="AddTerm">
+        <div className={`${showBtn ? "active" : ""} show`}>
             <form onSubmit={handleSubmit}>
                 <label>
                     <h5>Term</h5>
-                    <input type="text" value={newTerm} onChange={(e) => setNewTerm(e.target.value)} />
+                    
+                    <textarea value={newTerm} onChange={(e) => setNewTerm(e.target.value)} />
+                   
                 </label>
                 <label>
                     <h5>Definition</h5>
-                    <input type="text"
-                        value={definitions}
-                        onChange={(e) => setDefinitions(e.target.value)}
-                    />
+                       <textarea value={definitions}
+                        onChange={(e) => setDefinitions(e.target.value)} />
+                    
+                          
                 </label>
                 {/* <label>
                     <h5>languages</h5>
@@ -45,9 +48,11 @@ const AddNewTerm = ({ token }) => {
                         onChange={(e) => setLanguages(e.target.value)}
                     />
                 </label> */}
-                <button type="submit">Add New Term</button>
+                {/* <button type="submit">Add New Term</button> */}
+                <input type="submit" value="Submit" />
             </form>
 
+        </div>
         </div>
     )
 

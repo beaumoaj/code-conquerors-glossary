@@ -7,6 +7,7 @@ import Terms from './Terms';
 import Login from './Login';
 import AddNewTerm from './AddNewTerm';
 import UpdatingTheTerms from './UpdatingTheTerms';
+import AddNewTermBtn from './AddNewTermBtn';
 
 
 
@@ -14,6 +15,11 @@ function App() {
   const [search, setSearch] = useState("");
   const [terms, setTerms] = useState([]);
   const [token, setToken] = useState("");
+  const [showBtn, setShowBtn] = useState(true);
+
+  const handleLoginClick =()=>{
+    setShowBtn((showBtn) => !showBtn)
+  };
   
   // const [password, setPassword] = useState("");
   useEffect(() => {
@@ -30,8 +36,9 @@ function App() {
         <Login setToken={setToken} />
         <SearchButton search={search} setSearch={setSearch} />
         <Terms terms={terms} search={search} />
-        <AddNewTerm token={token} />
-        <UpdatingTheTerms  />
+        <AddNewTermBtn handleLoginClick={handleLoginClick} />
+        <AddNewTerm token={token} showBtn={showBtn}/>
+        <UpdatingTheTerms />
       </header>
     </div>
   );

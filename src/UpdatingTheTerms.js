@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-export default function UpdatingTheTerms({ token }) {
+export default function UpdatingTheTerms({ token, setToken }) {
     const [termId, setTermId] = useState("");
     const [terms, setTerms] = useState("");
     const [definitions, setDefinitions] = useState("");
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(JSON.stringify({ "termid": termId, "terms": terms, "definition": definitions}))
+        console.log(JSON.stringify({ "termId": termId, "terms": terms, "definition": definitions}))
         fetch("https://wm2-glossary.herokuapp.com/api/terms/update",
             {
                 method: "POST",
@@ -13,10 +13,11 @@ export default function UpdatingTheTerms({ token }) {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({ "termid": termId, "term": terms, "definition": definitions }),
+                body: JSON.stringify({ "termId": termId, "term": terms, "definition": definitions }),
             })
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            // .then((data) => setToken(data.auth))
+             .then((data) => console.log(data))
 
 
 
