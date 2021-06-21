@@ -1,20 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import SearchFile from './SearchFile';
-// import TermUpdate from './TermUpdate';
-import terms from './listOfTerms';
-import DataOfTerms from './DataOfTerms';
+import ResultPage from './ResultPage'
 
 
 function App()
 {
-  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="App">
-      <div>{`the length of the list is ${ terms.length }`}</div>
-      <SearchFile searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-      {/* <TermUpdate /> */}
-      <DataOfTerms searchTerm={searchTerm}/>
+      <ResultPage />
     </div>
   );
 }

@@ -1,21 +1,26 @@
 import React from "react";
 import terms from "./listOfTerms";
-import TermUpdate from "./TermUpdate";
 
-const DataOfTerms = ({searchTerm}) =>
+
+const DataOfTerms = () =>
 {
-    const filteredTerms = terms.filter( ( term )=>term.term.toLowerCase().includes(searchTerm.toLowerCase()))
+    
+
     return (
-      <div>
-        <TermUpdate />
-        {filteredTerms.map((term) => (
-          <li key={term.id}>
-            {term.term}
-            {term.definition}
+      <div className="Data">
+        {terms.map((term) => (
+          <li className="term" key={term.id}>
+            <p>{term.term}</p>
+            <p>{term.definition}</p>
+            {term.link && (
+              <a href={term.link} target="_blank" rel="noreferrer">
+                Further Reading
+              </a>
+            )}
           </li>
         ))}
       </div>
     );
-}
+}     
 
 export default DataOfTerms;
