@@ -8,6 +8,7 @@ import Login from './Login';
 import AddNewTerm from './AddNewTerm';
 import UpdatingTheTerms from './UpdatingTheTerms';
 import AddNewTermBtn from './AddNewTermBtn';
+import DeleteTerm from './DeleteTerm';
 
 
 
@@ -17,15 +18,26 @@ function App() {
   const [token, setToken] = useState("");
   const [showBtn, setShowBtn] = useState(true);
 
-  const handleLoginClick =()=>{
+  const handleLoginClick = () => {
     setShowBtn((showBtn) => !showBtn)
   };
-  
+
   // const [password, setPassword] = useState("");
   useEffect(() => {
     fetch("https://wm2-glossary.herokuapp.com/api/terms")
       .then((res) => res.json())
-      .then(setTerms)
+      .then((data) => {
+        console.log(data);
+        setTerms(data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    // .then((res) => res.json())
+    // .then(setTerms)
+    // .catch(function (error) {
+    //   console.log(error);
+    // })
   }, []);
 
   return (
@@ -37,8 +49,9 @@ function App() {
         <SearchButton search={search} setSearch={setSearch} />
         <Terms terms={terms} search={search} />
         <AddNewTermBtn handleLoginClick={handleLoginClick} />
-        <AddNewTerm token={token} showBtn={showBtn}/>
-        <UpdatingTheTerms />
+        <DeleteTerm />
+        <AddNewTerm token={token} showBtn={showBtn} />
+        <UpdatingTheTerms token={token} setToken={setToken} />
       </header>
     </div>
   );

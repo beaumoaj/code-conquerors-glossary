@@ -19,40 +19,45 @@ const AddNewTerm = ({ token, showBtn }) => {
                 body: JSON.stringify({ "term": newTerm, "definition": definitions, "userid": 1 }),
             })
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                console.log(data)
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
 
 
     }
 
     return (
         <div className="AddTerm">
-        <div className={`${showBtn ? "active" : ""} show`}>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <h5>Term</h5>
-                    
-                    <textarea value={newTerm} onChange={(e) => setNewTerm(e.target.value)} />
-                   
-                </label>
-                <label>
-                    <h5>Definition</h5>
-                       <textarea value={definitions}
-                        onChange={(e) => setDefinitions(e.target.value)} />
-                    
-                          
-                </label>
-                {/* <label>
+            <div className={`${showBtn ? "active" : ""} show`}>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <h5>Term</h5>
+
+                        <textarea value={newTerm} onChange={(e) => setNewTerm(e.target.value)} />
+
+                    </label>
+                    <label>
+                        <h5>Definition</h5>
+                        <textarea value={definitions}
+                            onChange={(e) => setDefinitions(e.target.value)} />
+
+
+                    </label>
+                    {/* <label>
                     <h5>languages</h5>
                     <input type=""
                         value={definitions}
                         onChange={(e) => setLanguages(e.target.value)}
                     />
                 </label> */}
-                {/* <button type="submit">Add New Term</button> */}
-                <input type="submit" value="Submit" />
-            </form>
+                    {/* <button type="submit">Add New Term</button> */}
+                    <input type="submit" value="Submit" />
+                </form>
 
-        </div>
+            </div>
         </div>
     )
 

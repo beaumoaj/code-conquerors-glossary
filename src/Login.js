@@ -13,7 +13,13 @@ const Login = ({ setToken }) => {
             body: JSON.stringify({ email, password, }),
         })
             .then((response) => response.json())
-            .then((data) => setToken(data.auth))
+            .then((data) => {
+                console.log(data)
+                setToken(data.auth)
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
     return (
         <div className="login">

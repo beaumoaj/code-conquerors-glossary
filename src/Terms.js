@@ -1,7 +1,7 @@
 import React from 'react';
 
 
- const Terms = ({ terms, search }) => {
+const Terms = ({ terms, search }) => {
     const filteredTerms = terms.filter((term) =>
         term.term.toLowerCase().includes(search.toLowerCase()
         ))
@@ -13,7 +13,8 @@ import React from 'react';
                     <h2 className="container">{term.term}
                         <p>{term.definition}</p>
                     </h2>
-                    </div>
+                </div>
+
 
             ))}
 
