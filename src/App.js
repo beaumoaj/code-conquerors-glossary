@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import SearchButton from './SearchButton';
-import { terms } from "./data.js"
+// import { terms } from "./data.js"
 import Terms from './Terms';
 import Login from './Login';
 import AddNewTerm from './AddNewTerm';
 import UpdatingTheTerms from './UpdatingTheTerms';
 import AddNewTermBtn from './AddNewTermBtn';
 import DeleteTerm from './DeleteTerm';
+// import Popup from './Popup';
 
 
 
@@ -17,6 +18,7 @@ function App() {
   const [terms, setTerms] = useState([]);
   const [token, setToken] = useState("");
   const [showBtn, setShowBtn] = useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleLoginClick = () => {
     setShowBtn((showBtn) => !showBtn)
@@ -45,12 +47,14 @@ function App() {
       <header className="App-header">
         <div>{`The length of the list is ${terms.length}`}</div>
         <h1>Terms Definition</h1>
-        <Login setToken={setToken} />
+       
+        <Login setToken={setToken} open={open} setOpen={setOpen}/>
+        
         <SearchButton search={search} setSearch={setSearch} />
         <Terms terms={terms} search={search} />
         <AddNewTermBtn handleLoginClick={handleLoginClick} />
-        <DeleteTerm />
         <AddNewTerm token={token} showBtn={showBtn} />
+        <DeleteTerm token={token}/>
         <UpdatingTheTerms token={token} setToken={setToken} />
       </header>
     </div>
