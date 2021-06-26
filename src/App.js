@@ -1,3 +1,4 @@
+
 // import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import './App.css';
@@ -12,6 +13,7 @@ import DeleteTerm from './DeleteTerm';
 import ListOfTerms from './ListOfTerms';
 import ResourcesList from './ResourcesList';
 import ResourceAdd from './ResourceAdd';
+import ResultPage from "./ResultPage"
 // import Popup from './Popup';
 
 
@@ -53,6 +55,7 @@ function App() {
         <ListOfTerms />
 
         <SearchButton search={search} setSearch={setSearch} />
+        <ResultPage />
         <Terms terms={terms} search={search} />
         <ResourcesList token={token} />
         <AddNewTermBtn handleLoginClick={handleLoginClick} />
