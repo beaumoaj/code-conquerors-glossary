@@ -4,8 +4,7 @@ const terms = [
     term: "Class",
     definition:
       "HTML elements can have one or more classes, separated by spaces. You can style elements using CSS by selecting them with their classes.",
-    link:
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class",
   },
   {
     id: 2,
@@ -49,6 +48,7 @@ const terms = [
     term: "Grid",
     definition:
       "To specify the number of columns of the grid and the widths of each column, the CSS property grid-template-columns is used on the grid container. The number of width values determines the number of columns and each width value can be either in pixels(px) or percentages(%).",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/grid",
   },
 
   {
@@ -72,6 +72,7 @@ const terms = [
     id: 12,
     term: "Loop",
     definition: "Loops can execute a block of code a number of times.",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
   },
   {
     id: 13,
@@ -323,7 +324,8 @@ const terms = [
     id: 53,
     term: "Function",
     definition:
-      "A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.It is like a reusable piece of code. Imagine , having 20 for loops ,and then having a single function to handle it all . To use a function, you must define it somewhere in the scope from which you wish to call it. A function definition (also called a function declaration) consists of the function keyword, followed by the name of the function, a list of arguments to the function, enclosed in parentheses and separated by commas, the JavaScript statements that define the function, enclosed in curly braces, { id:1, }.",
+          "A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.It is like a reusable piece of code. Imagine , having 20 for loops ,and then having a single function to handle it all . To use a function, you must define it somewhere in the scope from which you wish to call it. A function definition (also called a function declaration) consists of the function keyword, followed by the name of the function, a list of arguments to the function, enclosed in parentheses and separated by commas, the JavaScript statements that define the function, enclosed in curly braces, { id:1, }.",
+    
   },
   {
     id: 54,

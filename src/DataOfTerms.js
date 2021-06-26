@@ -10,7 +10,7 @@ const DataOfTerms = () =>
       <div className="Data">
         {terms.map((term) => (
           <li className="term" key={term.id}>
-            <p>{term.term}</p>
+            <h2>{term.term}</h2>
             <p>{term.definition}</p>
             {term.link && (
               <a href={term.link} target="_blank" rel="noreferrer">

@@ -1,11 +1,11 @@
 import React from "react";
-import DataOfTerms from "./DataOfTerms";
+import SingleTerm from "./SingleTerm";
 
 const ResultPage = () =>
 {
     return (
       <div className="resultPage">
-        <DataOfTerms />
+        <SingleTerm termid="1"/>
       </div>
     );
 }
