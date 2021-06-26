@@ -32,7 +32,7 @@
 .form-box {
   margin-top: 7vh;
   opacity: 80%;
-  background: black;
+  background-color: rgb(236, 15, 15);
   padding-right: 80px;
   padding-left: 80px;
   border-radius: 20px;
