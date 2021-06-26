@@ -9,7 +9,7 @@ function ListOfTerms({setRes, res, termid, definitions}){
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "termid":1
+                "termid":4
             })
             };
         fetch("https://wm2-glossary.herokuapp.com/api/terms/term", getTerm)
@@ -35,7 +35,7 @@ function ListOfTerms({setRes, res, termid, definitions}){
                 <header>List of Terms</header>
         <h1>{termid}</h1>
         <p>{definitions}</p>
-        
+
 
                 <ul>
        
