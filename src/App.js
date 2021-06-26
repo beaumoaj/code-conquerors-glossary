@@ -9,8 +9,9 @@ import AddNewTerm from './AddNewTerm';
 import UpdatingTheTerms from './UpdatingTheTerms';
 import AddNewTermBtn from './AddNewTermBtn';
 import DeleteTerm from './DeleteTerm';
-import ResourcesAdd from './ResourcesAdd';
- import ListOfTerms from './ListOfTerms';
+import ListOfTerms from './ListOfTerms';
+import ResourcesList from './ResourcesList';
+import ResourceAdd from './ResourceAdd';
 // import Popup from './Popup';
 
 
@@ -38,25 +39,26 @@ function App() {
       .catch(function (error) {
         console.log(error);
       })
-    
+
   }, []);
-  
+
 
   return (
     <div className="App">
       <header className="App-header">
         <div>{`The length of the list is ${terms.length}`}</div>
         <h1>Terms Definition</h1>
-       
-        <Login setToken={setToken} open={open} setOpen={setOpen}/>
-         <ListOfTerms /> 
-        
+
+        <Login setToken={setToken} open={open} setOpen={setOpen} />
+        <ListOfTerms />
+
         <SearchButton search={search} setSearch={setSearch} />
         <Terms terms={terms} search={search} />
-        <ResourcesAdd token={token}/>
+        <ResourcesList token={token} />
         <AddNewTermBtn handleLoginClick={handleLoginClick} />
         <AddNewTerm token={token} showBtn={showBtn} />
-        <DeleteTerm token={token}/>
+        <ResourceAdd token={token} />
+        <DeleteTerm token={token} />
         <UpdatingTheTerms token={token} setToken={setToken} />
       </header>
     </div>

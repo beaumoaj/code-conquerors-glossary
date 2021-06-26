@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
  import { postData } from './postData'
 
-function ResourcesAdd({ token }) {
+function ResourcesList({ token }) {
     const [termid, setTermid] = useState(1);
      const [res, setRes] = useState([]);
     const API = "https://wm2-glossary.herokuapp.com/api";
@@ -31,4 +31,4 @@ function ResourcesAdd({ token }) {
 
     )
 }
-export default ResourcesAdd;
+export default ResourcesList;
