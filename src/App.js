@@ -2,6 +2,7 @@
 // import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import './App.css';
+
 // import SearchButton from './SearchButton';
 // import { terms } from "./data.js"
 // import Terms from './Terms';
@@ -13,14 +14,17 @@ import './App.css';
 // import ListOfTerms from './ListOfTerms';
 // import ResourcesList from './ResourcesList';
 // import ResourceAdd from './ResourceAdd';
+import HomePage from './HomePage';
+import DataOfTerms from "./DataOfTerms";
+
 import ResultPage from "./ResultPage"
 // import Popup from './Popup';
 
 
 
 function App() {
-  // const [search, setSearch] = useState("");
-  // const [terms, setTerms] = useState([]);
+  const [search, setSearch] = useState("");
+  const [terms, setTerms] = useState([]);
   // const [token, setToken] = useState("");
   // const [showBtn, setShowBtn] = useState(true);
   // const [open, setOpen] = useState(true);
@@ -55,6 +59,8 @@ function App() {
         {/* <ListOfTerms /> */}
 
         {/* <SearchButton search={search} setSearch={setSearch} /> */}
+        <HomePage />
+        {/* <DataOfTerms /> */}
         <ResultPage />
         {/* <Terms terms={terms} search={search} /> */}
         {/* <ResourcesList token={token} /> */}

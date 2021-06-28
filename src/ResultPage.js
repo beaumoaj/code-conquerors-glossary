@@ -5,7 +5,7 @@ const ResultPage = () =>
 {
     return (
       <div className="resultPage">
-        <DataOfTerms />
+        {/* <DataOfTerms /> */}
       </div>
     );
 }
