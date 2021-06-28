@@ -34,9 +34,8 @@ const HomePage = () => {
           placeholder="Search Terms Here..."
           onChange={event => {setSearchTerm(event.target.value)}}
         />
-      {terms.filter( ( term ) =>
-      {
-        if ( searchTerm == "" )
+      {terms.filter( ( term ) => {
+        if ( searchTerm === "" )
         {
           return term
         } else if ( term.term.toLowerCase().includes( searchTerm.toLowerCase() ) ){
