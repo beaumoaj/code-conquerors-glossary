@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DataOfTerms from "./DataOfTerms";
 
 const SearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState( "" );
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -24,9 +24,9 @@ const SearchPage = () => {
     <div>
       <h1>CYF GLOSSARY PAGE</h1>
       <p>
-        This Is Code Your Future Glossary Page.
-        You Can find Terms And There Definition,
-        Including Resources (Videos,Links and Images) For Further Learning.
+        This Is Code Your Future Glossary Page. You Can find Terms And There
+        Definition, Including Resources (Videos,Links and Images) For Further
+        Learning.
       </p>
       <form onSubmit={<DataOfTerms />}>
         <input

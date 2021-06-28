@@ -25,40 +25,34 @@ const getTerm = (termid) => {
         link: "https://youtu.be/B4ZCFdrBmbE",
         type: "video",
         language: "javascript",
-        
       },
     ],
   };
 };
 
 const SingleTerm = ({ termid }) => {
-    const term = getTerm( termid );
-   
-    function embed(resource)
-    {
-        let item;
-       if (resource.type === "web") {
-         item = <li key={resource.resid}>{resource.link}</li>;
-       } else {
-         item = <YoutubeEmbed embedUrl={resource.link} />;
-       }
-        
-        return item;
+  const term = getTerm(termid);
 
-   }
-    
- 
-    return (
+  function embed(resource) {
+    let item;
+    if (resource.type === "web") {
+      item = <li key={resource.resid}>{resource.link}</li>;
+    } else {
+      item = <YoutubeEmbed embedUrl={resource.link} />;
+    }
+
+    return item;
+  }
+
+  return (
     <div>
-        <h1>{term.term}</h1>
-        <p>{term.definition}</p>
-            <ul>
-                {term.resources.map( ( resource ) =>
-                {
-                   return(<li key={resource.resid}>{embed(resource)}</li>)
-                })}
-            </ul>
-            
+      <h1>{term.term}</h1>
+      <p>{term.definition}</p>
+      <ul>
+        {term.resources.map((resource) => {
+          return <li key={resource.resid}>{embed(resource)}</li>;
+        })}
+      </ul>
     </div>
   );
 };
