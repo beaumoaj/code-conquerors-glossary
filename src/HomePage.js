@@ -22,12 +22,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>CYF GLOSSARY PAGE</h1>
-      <p>
-        This Is Code Your Future Glossary Page. You Can find Terms And There
-        Definition, Including Resources (Videos,Links and Images) For Further
-        Learning.
-      </p>
+      
     
         <input
           type="text"
@@ -56,24 +51,6 @@ const HomePage = () => {
           </div>
         );
       })}
-            
-          {/* <div className="Data">
-         {terms.map((term) => (
-          <li className="term" key={term.id}>
-            <p>{term.term}</p>
-            <p>{term.definition}</p>
-            {term.link && (
-              <a href={term.link} target="_blank" rel="noreferrer">
-                Further Reading
-              </a>
-            )}
-          </li>
-        ))}
-      </div> */}
-        
-        {/* <button type="submit" onSubmit={callSearchFunction}>Search</button> */}
-    
-    
     </div>
   );
 };

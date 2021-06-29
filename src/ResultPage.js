@@ -1,13 +1,13 @@
-import React from "react";
-import DataOfTerms from "./DataOfTerms";
+// import React from "react";
+// import DataOfTerms from "./DataOfTerms";
 
-const ResultPage = () =>
-{
-    return (
-      <div className="resultPage">
-        {/* <DataOfTerms /> */}
-      </div>
-    );
-}
+// const ResultPage = () =>
+// {
+//     return (
+//       <div className="resultPage">
+//         {/* <DataOfTerms /> */}
+//       </div>
+//     );
+// }
 
-export default ResultPage;
+// export default ResultPage;

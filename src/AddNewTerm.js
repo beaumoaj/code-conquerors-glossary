@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-// import { terms } from './data';
-const AddNewTerm = ({ token, showBtn }) => {
+
+const AddNewTerm = ( { token, showBtn } ) =>
+{
     const [newTerm, setNewTerm] = useState("");
     const [definitions, setDefinitions] = useState("");
-
-    // const[languages, setLanguages]= useState("");
     function handleSubmit(e) {
         e.preventDefault();
         console.log(JSON.stringify({ "term": newTerm, "definition": definitions, "userid": 1 }));
@@ -42,18 +41,10 @@ const AddNewTerm = ({ token, showBtn }) => {
                     <label>
                         <h5>Definition</h5>
                         <textarea value={definitions}
-                            onChange={(e) => setDefinitions(e.target.value)} />
+                        onChange={(e) => setDefinitions(e.target.value)} />
 
 
                     </label>
-                    {/* <label>
-                    <h5>languages</h5>
-                    <input type=""
-                        value={definitions}
-                        onChange={(e) => setLanguages(e.target.value)}
-                    />
-                </label> */}
-                    {/* <button type="submit">Add New Term</button> */}
                     <input type="submit" value="Submit" />
                 </form>
 
