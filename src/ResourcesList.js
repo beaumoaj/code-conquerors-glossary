@@ -3,17 +3,18 @@ import React, { useEffect, useState } from 'react';
 
 function ResourcesList({ token }) {
     const [termid, setTermid] = useState(1);
-     const [res, setRes] = useState([]);
+    
+     const [resources, setResources] = useState([]);
     const API = "https://wm2-glossary.herokuapp.com/api";
     function handleSubmit() {
        
         console.log({ "termid": 1 })
-        postData(`${API}/term/resources`, { "termid": 1 },token)
+        postData(`${API}/term/resources`, { "termid": termid },token)
 
 
             .then((data) => {
                 console.log(data);
-                setRes(data)
+                setResources(data)
             })
             .catch(function (error) {
                 console.log(error);
@@ -24,7 +25,7 @@ function ResourcesList({ token }) {
     },[])
     return (
         <div>
-              <div>{`The length of term ${res.length}`}</div>
+              <div>{`The length of term ${resources.length}`}</div>
         </div>
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 export default function SearchButton({ search, setSearch }) {
     //  const [search, setSearch] = useState("");
 
@@ -7,12 +9,13 @@ export default function SearchButton({ search, setSearch }) {
         setSearch(e.target.value);
     }
     return (
-        <div>
+        <div className="Input">
             <form>
                 <input type="text"
+                name="search"
                     value={search}
                     onChange={handleChange}
-                    placeholder="Type words" />
+                    placeholder="Search..." />
                 < button type="submit">Submit Button</button>
                 {/* <button type="submit" onClick={handleSubmit}>Submit Button</button> */}
             </form>

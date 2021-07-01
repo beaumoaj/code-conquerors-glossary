@@ -1,6 +1,7 @@
-.App {
+.wrapper {
   text-align: center;
   background-color: aquamarine;
+  padding: 20px;
 }
 .container {
   box-shadow: 1px 1.5px 5px 0.5px black;
@@ -160,6 +161,18 @@ a {
   font-size: calc(10px + 2vmin);
   color: white;
 } 
+/* .Input{
+  width:100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  background-color: white; */
+  /* background-image: url("searchicon.png"); */
+  /* background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out; */
+/* } */
 
 /* .App-link {
   color: #61dafb;

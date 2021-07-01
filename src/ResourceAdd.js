@@ -1,14 +1,17 @@
-// POST / terms / resources / add will insert a new resource for a specific term.Parameters are termid, link, linktype(video or web), language(AUTH)
 
 import React, { useState } from 'react';
 import { postData } from './postData'
-const ResourceAdd = ({termid, API, token, setTermid}) =>{
+const ResourceAdd = ({ API, token}) =>{
     const [links, setLinks] = useState("");
     const [linktypes, setLinktypes] = useState();
+    const [termid, setTermid] = useState(1);
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
 
     function resourceAdd(){
-        postData(`${API}/term/resources/add`,{ "termid": termid, "link":links, 
-    "linktypes":linktypes}, token)
+        postData(`${API}/terms/resources/add`,{ "termid": termid, "link":links, 
+    "linktype":linktypes}, token)
 
             .then(data => {
                 console.log(data)
@@ -18,12 +21,25 @@ const ResourceAdd = ({termid, API, token, setTermid}) =>{
             })
 
     }
+
+
     return(
         <div>
+            <form onSubmit={handleSubmit}>
+                <label>Resource Add</label><br></br>Term Id:
             <input type="text" name="termid" onBlur={(e) => setTermid(e.target.value)} />
-            <input type="url" name="url" onChange={(e)=>setLinks(e.target.value)} />
-            <a href="url"/>
+                
+            
+            <br></br>
+            <label>Link:
+            <input type="url" name="url" onChange={(e)=>setLinks(e.target.value)}/>
+                </label>
+                <br></br>
+                <label>Link Type
+            <input type="text" name="type" onChange={(e) => setLinktypes(e.target.value)} />
+            </label>
             <button onClick={(e) => resourceAdd()}>Add Resources</button>
+            </form>
         </div>
     )
 
