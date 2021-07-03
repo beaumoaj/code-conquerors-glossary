@@ -24,9 +24,9 @@ const ResourceAdd = ({ API, token}) =>{
 
 
     return(
-        <div>
+        <div className="resources">
             <form onSubmit={handleSubmit}>
-                <label>Resource Add</label><br></br>Term Id:
+                <h3>Resource Add</h3><br></br>Term Id:
             <input type="text" name="termid" onBlur={(e) => setTermid(e.target.value)} />
                 
             

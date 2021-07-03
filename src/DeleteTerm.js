@@ -4,7 +4,7 @@ const DeleteTerm = ({ token }) => {
     const [termIds, setTermIds] = useState("");
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(JSON.stringify({ "termid": termIds }))
+        // console.log(JSON.stringify({ "termid": termIds }))
         fetch("https://wm2-glossary.herokuapp.com/api/terms/delete", {
             method: "POST",
             headers: {
@@ -23,7 +23,7 @@ const DeleteTerm = ({ token }) => {
     }
     return (
 
-        <div className="delete">
+        <div className="update">
             <form onSubmit={handleSubmit}>
                 <input
                     type="number"
@@ -31,7 +31,8 @@ const DeleteTerm = ({ token }) => {
 
                     onChange={(event) => setTermIds(event.target.value)}
                 />
-                <button type="submit">DELETE</button>
+                {/* <button type="submit" onClick={(e)=>setTermIds()}>DELETE</button> */}
+                  <button type="submit" onClick={(e)=>{if(window.confirm("Are you sure you wish to delete this term?"))setTermIds(e)}}>DELETE</button> 
             </form>
         </div>
     )

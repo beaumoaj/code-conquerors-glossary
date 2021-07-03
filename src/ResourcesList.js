@@ -25,7 +25,8 @@ function ResourcesList({ token }) {
     },[])
     return (
         <div>
-              <div>{`The length of term ${resources.length}`}</div>
+             
+             
         </div>
 
 

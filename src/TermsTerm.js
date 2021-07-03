@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import YoutubeEmbed from "./YoutubeEmbed";
+// import { useParams } from "react-router-dom";
 // import { postData } from './postData'
 function TermsTerm() {
+    // let { id } = useParams();
     const [term, setTerm] = useState({});
     // const [resources, setResources] = useState("");
     useEffect(() => {
@@ -11,7 +13,7 @@ function TermsTerm() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "termid": 27,
+                "termid": 1,
             })
         };
         fetch("https://wm2-glossary.herokuapp.com/api/terms/term", getTerm)
@@ -31,7 +33,7 @@ function TermsTerm() {
     function embed(resource) {
         let item;
         if (resource.type === "web") {
-            item = <li key={resource.resid}>{resource.link}</li>;
+            item = <li  key={resource.resid}>{resource.link}</li>;
         } else {
             item = <YoutubeEmbed embedUrl={resource.link} />;
         }
@@ -39,8 +41,8 @@ function TermsTerm() {
     }
     return (
         <div>
-            <header>List of Terms</header>
-            <h1>{term.term}</h1>
+            {/* <header>List of Terms</header> */}
+            <h2>{term.term}</h2>
             <p>{term.definition}</p>
 
             <ul>
@@ -54,7 +56,7 @@ function TermsTerm() {
 
                         })
                     )
-                        : <h3>There are no resources</h3>
+                        : <h4>There are no resources</h4>
                 }
             </ul>
         </div>

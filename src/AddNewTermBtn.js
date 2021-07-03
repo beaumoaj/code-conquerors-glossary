@@ -5,7 +5,7 @@ function AddNewTermBtn({ handleLoginClick }) {
 
     }
     return (
-        <div className="termBtn">
+        <div className="update">
             <div>
 
                 <span onClick={handleClick} className="icon">ADD NEW TERM</span>

@@ -16,7 +16,7 @@ export default function SearchButton({ search, setSearch }) {
                     value={search}
                     onChange={handleChange}
                     placeholder="Search..." />
-                < button type="submit">Submit Button</button>
+                {/* < button type="submit">Submit Button</button> */}
                 {/* <button type="submit" onClick={handleSubmit}>Submit Button</button> */}
             </form>
         </div>

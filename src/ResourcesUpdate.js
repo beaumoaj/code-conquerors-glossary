@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
 import { postData } from './postData';
-const ResourcesUpdate = ({ termid, API, token, links, linktypes, setTermid, setLinks, setLinktypes})=>{
+const ResourcesUpdate = ({  API, token, links, linktypes, setLinks, setLinktypes})=>{
     const [resourcesid, setResourcesid] = useState("");
+    const [termid, setTermid] = useState(1);
 
     function resourcesUpdate() {
         postData(`${API}/term/resources/update`, { "resourcesid":resourcesid, 
@@ -19,7 +20,8 @@ const ResourcesUpdate = ({ termid, API, token, links, linktypes, setTermid, setL
         };
 
         return (
-            <div>
+            <div className="resources">
+                <h3>Update Resources</h3>
                 <input type="number" name="resourcesid" onBlur={(e)=> setResourcesid(e.target.value)}/>
                 <input type="text" name="termid" onBlur={(e) => setTermid(e.target.value)} />
                 <input type="url" name="url" onChange={(e) => setLinks(e.target.value)} />

@@ -31,16 +31,17 @@ export default function UpdatingTheTerms({ token }) {
         <div className="update">
             <form onSubmit={handleSubmit}>
 
-                <label>
-                    <h3>Terms</h3>
+                <label>Update Term</label> <br></br>Term:
+                 
                     <input type="text" value={terms} onChange={(e) => setTerms(e.target.value)} />
-                </label>
-                <label>
-                    <h3>Definition</h3>
+                <br></br>
+                <label>Definition:
+                    
                     <input type="text" value={definitions} onChange={(e) => setDefinitions(e.target.value)} />
                 </label>
-                <label>
-                    <h3>TermId</h3>
+                <br></br>
+                <label>TermId:
+                    
                     <input type="text" value={termId} onChange={(e) => setTermId(e.target.value)} />
                 </label>
 

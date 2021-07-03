@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { postData } from './postData';
-const ResourcesDelete = ({ resourcesid, API, token, setResourcesid }) => {
+const ResourcesDelete = ({  API, token }) => {
+    const[resourcesid, setResourcesid]=useState("");
    
 
     function resourcesDelete() {
@@ -17,7 +18,8 @@ const ResourcesDelete = ({ resourcesid, API, token, setResourcesid }) => {
             })
     };
     return(
-        <div>
+        <div className="resources">
+            <h3>Delete Resources</h3>
             <input type="number" name="resourcesid" onBlur={(e) => setResourcesid(e.target.value)} />
             <button onClick={(e) => resourcesDelete()}>Delete Resources</button>
         </div>
