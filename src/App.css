@@ -1,111 +1,9 @@
 .App {
-  text-align: center;
+  text-align: left;
   background-color: white;
-}
-.container {
-  box-shadow: 1px 1.5px 5px 0.5px black;
-  padding: 15px 20px;
-}
-.AddTerm form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  resize: none;
+
 }
 
-.icon {
-  position: relative;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  color: black;
-  background: blue;
-  cursor: pointer;
-  border-radius: 24px;
-}
-.modal-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.form-box {
-  margin-top: 7vh;
-  opacity: 80%;
-  background-color: rgb(236, 15, 15);
-  padding-right: 80px;
-  padding-left: 80px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
-}
-.submit-btn {
-  width: 75%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(48, 172, 251);
-  color: white;
-  margin-top: 5px;
-  border-radius: 20px;
-  border: none;
-  font-size: 15pt;
-  font-weight: 700;
-  transition: 1s;
-  outline: none;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.login-box {
-  border: 1px solid lightgrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 2px;
-  padding-left: 10px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin: 5px;
-  font-size: 11pt;
-  background: transparent;
-  transition: 1s;
-  outline: none;
-}
-/* .open-btn{
-  position: absolute;
-  width: 80px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
-  color: black;
-  height: 40px;
-  left: 85%;
-  top: 10px;
-  background:#2bc6ff;
-  border-radius: 24px;
-  cursor: pointer;
-} */
-
-.modal-box {
-  width: 100%;
-  color: white;
-  border-bottom: 2px solid white;
-  line-height: 30px;
-  width: 100%;
-  font-weight: bolder;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5vh;
-}
-label {
-  color: white;
-  width: 100%;
-  text-align: center;
-}
 input[type="submit"] {
   background-color: rgb(81, 255, 0);
   border: none;
@@ -115,26 +13,38 @@ input[type="submit"] {
   margin: 4px 2px;
   cursor: pointer;
 }
-.show {
-  display: block;
-  transition: 800ms;
-  opacity: 1;
-}
-.show.active {
-  transform: translateY(100px) scale(0) rotateY(180deg);
-  opacity: 0;
-}
 
 .resultPage {
- display: inline;
- align-content: center;
- list-style-type: none;
+  display: inline;
+  align-content: center;
+  list-style-type: none;
+}
+
+nav img{
+  width: 253px;
+  height: 80px;
+}
+
+.mission {
+  width: 40%;
+}
+
+input{
+  box-sizing: border-box;
+  width: 50%;
+  border-radius: 10px;
+}
+
+button{
+ background-color: black;
+ color: white;
+
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  color: red;
+  color: Black;
   margin-right: 10px;
 }
 
@@ -143,42 +53,12 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: rgb(228, 94, 94);
   color: black;
-  
 }
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
+.terms{
+  text-align: left;
+}
 
 
-.App-header {
-  background-color: white;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-} 
 
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
