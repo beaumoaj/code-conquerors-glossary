@@ -5,21 +5,21 @@ const Nav = () =>
 {
     return (
       <Router>
-        <nav className="">
+        <nav className="nav">
           <img
             src="https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png"
             alt=""
-                />
+          />
           <div className="mission">
-            Welcome to Code Your Future Glossary.
-            You Can find Terms And There
-            Definition, Including Resources (Videos,Links and Images) For
-            Further Learning.
+            CYF Glossary is a unique place that documents technical terms that
+            are used and/or searched within different classes of CYF. It ensures
+            that all our students can understand and utilize what is meant by
+            the terminology, acronyms, and phrases used inside Code Your Future
+            with a clear definition, materials and external resources 2:32 and
+            let's try that text
           </div>
 
-            <div className="login">
-               Login     
-            </div>
+          <div className="login">Login</div>
         </nav>
       </Router>
     );

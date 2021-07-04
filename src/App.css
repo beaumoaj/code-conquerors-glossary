@@ -1,18 +1,18 @@
 .App {
   text-align: left;
   background-color: white;
-
+  margin: 100px;
 }
 
-input[type="submit"] {
-  background-color: rgb(81, 255, 0);
+/* input[type="submit"] { 
+  background-color: rgb(81, 255, 0); 
   border: none;
   color: white;
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
-  cursor: pointer;
-}
+  cursor: pointer; 
+} */
 
 .resultPage {
   display: inline;
@@ -21,8 +21,10 @@ input[type="submit"] {
 }
 
 nav img{
-  width: 253px;
-  height: 80px;
+  width: 137px;
+  height: 50px;
+  display: block;
+
 }
 
 .mission {
@@ -32,12 +34,17 @@ nav img{
 input{
   box-sizing: border-box;
   width: 50%;
+  height: 40px;
   border-radius: 10px;
+  border-color: grey;
+  border-top-color: grey;
 }
 
 button{
  background-color: black;
  color: white;
+ height: 35px;
+ width: 220px;
 
 }
 
@@ -48,17 +55,18 @@ a {
   margin-right: 10px;
 }
 
-nav{
+.nav{
+  margin: 0px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  color: black;
 }
+
+/* nav .mission{
+  tex
+} */
 
 .terms{
   text-align: left;
 }
-
 
 
