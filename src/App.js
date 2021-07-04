@@ -13,9 +13,22 @@ function App() {
       <div className="App">
         {/* <header></header> */}
         <div>
+
           <Nav />
           
           {/* <h1>CYF GLOSSARY PAGE</h1> */}
+
+          {/* <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/ReviewerPage">Reviewer</Link>
+              </li>
+            </ul>
+          </nav> */}
+
           <Switch>
             <Route exact path="/">
               <HomePage />
