@@ -26,6 +26,10 @@
   resize: none;
 }
 
+.SingleTerm h2{
+  text-decoration: underline;
+}
+
 .Terms h2 {
   color: rgb(223, 15, 15);
   font-size: 40px;
@@ -35,9 +39,9 @@
   padding: 10px; */
 }
 
-.Terms h2 p {
+/* .Terms h2 p {
   line-height: 10px;
-}
+} */
 
 .resultPage {
   display: inl
