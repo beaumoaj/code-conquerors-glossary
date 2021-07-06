@@ -12,7 +12,7 @@ const customStyles = {
 };
 Modal.setAppElement('#root');
 
-const Login = () => {
+const Login = (setToken) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -31,7 +31,7 @@ const Login = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                // setToken(data.auth)
+                setToken(data.auth)
             })
             .catch(function (error) {
                 console.log(error);

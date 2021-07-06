@@ -1,5 +1,8 @@
 import React from 'react';
-function AddNewTermBtn({ handleLoginClick }) {
+
+
+function AddNewTermBtn( { handleLoginClick } )
+{
     const handleClick = () => {
         handleLoginClick()
 
