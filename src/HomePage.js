@@ -7,7 +7,7 @@
 
 const HomePage = ({ search, setSearch, terms, handleLoginClick, token }) => {
   return (
-    <div>
+    <div className="home">
       {/* <SearchButton search={search} setSearch={setSearch} /> */}
 
       {/* <TermsTerm />    */}

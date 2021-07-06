@@ -1,22 +1,98 @@
 .wrapper {
-  text-align: center;
+  text-align: left;
   background-color: white;
-  padding: 20px;
+  padding: 50px;
+  margin: 0px;
 }
+
+/* .home{
+  line-height: 50px;
+} */
+
 .container {
   /* box-shadow: 1px 1.5px 5px 0.5px black; */
   /* padding: 15px 20px; */
-  border: 2px solid black;
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
+  /* border: 2px solid black; */
+  /* height: 100%; */
+  /* width: 100%; */
+  margin: 5px;
+  /* padding: 0px; */
 }
+
 .AddTerm form {
   align-items: center;
   display: flex;
   flex-direction: column;
   resize: none;
+}
+
+.Terms h2 {
+  color: rgb(223, 15, 15);
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  /* margin: 10px;
+  padding: 10px; */
+}
+
+.Terms h2 p {
+  line-height: 10px;
+}
+
+.resultPage {
+  display: inl
+  ine;
+  align-content: center;
+  list-style-type: none;
+}
+
+
+.update {
+  text-align: justify;
+  padding: 20px;
+  border-radius: 10px;
+}
+.resources {
+  text-align: left;
+  /* padding: 20px; */
+}
+
+/* h3 {
+  text-align: justify;
+} */
+
+ /* li {
+  list-style: none;
+}  */
+
+nav img{
+  /* text-align: left; */
+  width: 147px;
+  height: 60px;
+  
+}
+
+.mission {
+  width: 80%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  /* display: inline-block; */
+}
+
+ nav li {
+  display: inline; 
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: white;
+  /* background-color: rgb(228, 94, 94); */
+  color: black;
 }
 
 .icon {
@@ -78,22 +154,6 @@
   outline: none;
   float: left;
 }
-/* .open-btn{
-  position: absolute;
-  width: 80px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
-  color: black;
-  height: 40px;
-  left: 85%;
-  top: 10px;
-  background:#2bc6ff;
-  border-radius: 24px;
-  cursor: pointer;
-} */
 
 .modal-box {
   width: 100%;
@@ -108,21 +168,23 @@
   align-items: center;
   padding-top: 5vh;
 }
+
 label {
   color: white;
   width: 100%;
   text-align: center;
 }
-input[type="submit"] {
-  background-color: rgb(81, 255, 0);
-  border: none;
+
+.Input form input {
+  border-radius: 10px;
   color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
+  width: 50%;
+  height: 35px;
+  margin: 40px;
+  padding: 0px;
 }
-.show {
+/* .show {
   display: block;
   transition: 800ms;
   opacity: 1;
@@ -130,20 +192,9 @@ input[type="submit"] {
 .show.active {
   transform: translateY(100px) scale(0) rotateY(180deg);
   opacity: 0;
-}
+} */
 
-.resultPage {
-  display: inline;
-  align-content: center;
-  list-style-type: none;
-}
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  /* color: rgb(238, 6, 6); */
-  margin-right: 10px;
-}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -166,11 +217,7 @@ a {
   font-size: calc(10px + 2vmin);
   color: black; */
 /* } */
-h2 {
-  color: rgb(223, 15, 15);
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 /* .page{
   text-align: justify;
 } */
@@ -187,21 +234,7 @@ h2 {
   transition: width 0.4s ease-in-out; */
 /* }  */
 
-.update {
-  text-align: justify;
-  padding: 20px;
-  border-radius: 10px;
-}
-.resources {
-  text-align: left;
-  /* padding: 20px; */
-}
-h3 {
-  text-align: justify;
-}
- li {
-  list-style: none;
-} 
+
 
 /* nav li {
   text-decoration: none;
@@ -224,27 +257,7 @@ nav li {
 nav li :hover {
   opacity: 0.5;
 } */
-nav img{
-  width: 253px;
-  height: 80px;
-}
-.mission {
-  width: 40%;
-}
- nav li {
-  display: inline; 
-}
-nav{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background-color: white;
-  /* background-color: rgb(228, 94, 94); */
-  color: black;
-  
-}
+
 /* .App-link {
   color: #61dafb;
 } */
@@ -256,4 +269,28 @@ nav{
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* .open-btn{
+  position: absolute;
+  width: 80px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: black;
+  height: 40px;
+  left: 85%;
+  top: 10px;
+  background:#2bc6ff;
+  border-radius: 24px;
+  cursor: pointer;
+} */
+
+/* a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(238, 6, 6);
+  margin-right: 10px;
 } */

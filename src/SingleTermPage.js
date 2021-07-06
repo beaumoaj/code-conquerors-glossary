@@ -48,7 +48,7 @@ const SingleTermPage = ({ setToken, token}) => {
   }
 
   return (
-    <div>
+    <div className="SingleTerm">
       <Nav setToken={setToken} />
       <div>
         {/* <h5>{term.termid}</h5> */}
