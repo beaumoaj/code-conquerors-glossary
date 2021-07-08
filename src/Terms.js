@@ -32,7 +32,7 @@ const Terms = ({ terms, search, resources, setSearch, setToken }) => {
                 {filteredTerms.map((term) => (
 
                     <div key={term.id}>
-                        <h2 className="container" ><a href={`/singleTermPage/${term.id}`}>{term.term}</a></h2>
+                        <h2 className=""><a className="href" href={`/singleTermPage/${term.id}`}>{term.term}</a></h2>
                         {/* h2< className="container" onClick={() => handleClick(term.id)}>{term.term}</h2> */}
                         <p>{term.definition}</p>
 

@@ -51,13 +51,12 @@ const SingleTermPage = ({ setToken, token}) => {
     <div className="SingleTerm">
       <Nav setToken={setToken} />
       <div>
-        {/* <h5>{term.termid}</h5> */}
         <h2>{term.term}</h2>
         <p>{term.definition}</p>
         <ul>
           {term.resources ? (
             term.resources.map((resource) => {
-              console.log(term.resources);
+              // console.log(term.resources);
               return <li key={resource.resid}>{embed(resource)}</li>;
             })
           ) : (
@@ -66,11 +65,8 @@ const SingleTermPage = ({ setToken, token}) => {
         </ul>
         {token ? (<DeleteTerm token={token}/>) : null}
         {token ? <UpdatingTheTerms token={token} setToken={setToken}/> : null}
-        {/* {token ? <button>hello</button> : null} */}
       </div>
     </div>
   );
 };
 export default SingleTermPage;
-
-{/* <Route exact path="/SingleTermPage/:id" component={SingleTermPage}><SingleTermPage setToken={setToken} token={token}/></Route>  */}

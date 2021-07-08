@@ -6,7 +6,7 @@ const Nav = ({setToken, open, setOpen}) =>
 {
     return (
       <BrowserRouter>
-        <nav className="mission">
+        <nav className="nav">
           <img
             src="https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png"
             alt=""
@@ -18,8 +18,6 @@ const Nav = ({setToken, open, setOpen}) =>
             Further Learning.
           </div>
           <Login setToken={setToken} open={open} setOpen={setOpen} />
-         
-         
         </nav>
       </BrowserRouter>
     );

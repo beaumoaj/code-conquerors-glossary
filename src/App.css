@@ -1,79 +1,22 @@
 .wrapper {
   text-align: left;
   background-color: white;
-  padding: 50px;
+  padding: 20px;
   margin: 0px;
 }
 
-/* .home{
-  line-height: 50px;
-} */
-
-.container {
-  /* box-shadow: 1px 1.5px 5px 0.5px black; */
-  /* padding: 15px 20px; */
-  /* border: 2px solid black; */
-  /* height: 100%; */
+.nav{
   /* width: 100%; */
-  margin: 5px;
-  /* padding: 0px; */
-}
-
-.AddTerm form {
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  resize: none;
+  justify-content: space-around;
+  /* align-items: left; */
+  min-height: 5vh;
+  background-color: white;
 }
-
-.SingleTerm h2{
-  text-decoration: underline;
-}
-
-.Terms h2 {
-  color: rgb(223, 15, 15);
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: underline;
-  /* margin: 10px;
-  padding: 10px; */
-}
-
-/* .Terms h2 p {
-  line-height: 10px;
-} */
-
-.resultPage {
-  display: inl
-  ine;
-  align-content: center;
-  list-style-type: none;
-}
-
-
-.update {
-  text-align: justify;
-  padding: 20px;
-  border-radius: 10px;
-}
-.resources {
-  text-align: left;
-  /* padding: 20px; */
-}
-
-/* h3 {
-  text-align: justify;
-} */
-
- /* li {
-  list-style: none;
-}  */
 
 nav img{
-  /* text-align: left; */
   width: 147px;
   height: 60px;
-  
 }
 
 .mission {
@@ -82,24 +25,103 @@ nav img{
   margin: 0;
   padding: 0;
   /* display: inline-block; */
+  text-align: center;
 }
 
- nav li {
-  display: inline; 
+.Input form input {
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  width: 50%;
+  height: 35px;
+  margin: 40px;
+  padding: 0px;
 }
 
-nav{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background-color: white;
-  /* background-color: rgb(228, 94, 94); */
+a {
+  text-decoration: none;
+  cursor: pointer;
   color: black;
+  margin: 0px;
 }
 
-.icon {
+.SingleTerm h2{
+  text-decoration: underline;
+  text-decoration-color: black;
+  margin: 0;
+  margin-bottom: 5px;
+  padding-top: 50px;
+
+}
+
+.Terms h2 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.resultPage {
+  display: inline;
+  align-content: center;
+  list-style-type: none;
+}
+
+.Terms p{
+  line-height: 1.4em;
+  margin: 0px;
+  padding-bottom: 50px;
+}
+
+.SingleTerm li{
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+.SingleTerm p{
+  margin-top: 0px;
+}
+
+.container {
+  /* box-shadow: 1px 1.5px 5px 0.5px black; */
+  /* padding: 15px 20px; */
+  /* border: 2px solid black; */
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+
+/* .AddTerm form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  resize: none;
+} */
+
+/* h2 {
+  text-decoration-color: black;
+} */
+/* .Terms h2 p {
+  line-height: 10px;
+} *
+
+/* .update {
+  text-align: justify;
+  padding: 20px;
+  border-radius: 10px;
+} */
+
+/* .resources {
+  text-align: left;
+} */
+
+/* .href{
+  text-decoration-color: black;
+} */
+
+/* .icon {
   position: relative;
   width: 80px;
   display: flex;
@@ -108,15 +130,17 @@ nav{
   background: blue;
   cursor: pointer;
   border-radius: 24px;
-}
-.modal-wrapper {
+} */
+
+/* .modal-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
-.form-box {
+} */
+
+/* .form-box {
   margin-top: 7vh;
   opacity: 80%;
   background-color: rgb(236, 15, 15);
@@ -124,8 +148,9 @@ nav{
   padding-left: 80px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
-}
-.submit-btn {
+} */
+
+/* .submit-btn {
   width: 75%;
   justify-content: center;
   align-items: center;
@@ -140,8 +165,8 @@ nav{
   outline: none;
   cursor: pointer;
   margin-bottom: 20px;
-}
-.login-box {
+} */
+/* .login-box {
   border: 1px solid lightgrey;
   display: flex;
   justify-content: center;
@@ -157,9 +182,9 @@ nav{
   transition: 1s;
   outline: none;
   float: left;
-}
+} */
 
-.modal-box {
+/* .modal-box {
   width: 100%;
   color: white;
   border-bottom: 2px solid white;
@@ -171,23 +196,15 @@ nav{
   justify-content: center;
   align-items: center;
   padding-top: 5vh;
-}
+} */
 
-label {
+/* label {
   color: white;
   width: 100%;
   text-align: center;
-}
+} */
 
-.Input form input {
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  width: 50%;
-  height: 35px;
-  margin: 40px;
-  padding: 0px;
-}
+
 /* .show {
   display: block;
   transition: 800ms;
@@ -292,9 +309,3 @@ nav li :hover {
   cursor: pointer;
 } */
 
-/* a {
-  text-decoration: none;
-  cursor: pointer;
-  color: rgb(238, 6, 6);
-  margin-right: 10px;
-} */

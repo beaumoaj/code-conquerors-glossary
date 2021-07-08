@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch,} from "react-router-dom";
 import ResourcesPage from "./ResourcesPage"
 import Terms from './Terms';
 import SingleTermPage from './SingleTermPage';
@@ -40,12 +40,14 @@ function App() {
   return (
     <div className="wrapper" id="main">
       <BrowserRouter>
+        
         <Switch>
+
           <Route exact path="/singleTermPage/:id" component={SingleTermPage}>
             <SingleTermPage setToken={setToken} token={token} />
           </Route>
+
           <Route exact path="/contributorPage">
-            {/* <Route path="/contributorPage/:userid" component={ContributorPage}> */}
             <ContributorPage
               open={open}
               setOpen={setOpen}
@@ -56,9 +58,11 @@ function App() {
               API={API}
             />
           </Route>
+
           <Route exact path="/resourcesPage">
             <ResourcesPage API={API} token={token} setToken={setToken} />
           </Route>
+
           <Route exact path="/termPage">
             <TermPage
               setToken={setToken}
@@ -67,6 +71,7 @@ function App() {
               handleLoginClick={handleLoginClick}
             />
           </Route>
+
           <Route exact path="/">
             <Terms
               terms={terms}
@@ -78,7 +83,9 @@ function App() {
               token={token}
             />
           </Route>
+
         </Switch>
+
       </BrowserRouter>
     </div>
   );
